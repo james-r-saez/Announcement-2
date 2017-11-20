@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Augmented Reality</title>
+	<head>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed" rel="stylesheet">
+	<style type="text/css">
+		*{box-sizing:border-box}
+			.slideshow-container {
+				max-width: 1000px;
+				position: relative;
+				margin: auto;
+			}
+			.mySlides {
+				display: none;
+			}
+			.prev, .next {
+				cursor: pointer;
+				position: absolute;
+				top: 50%;
+				width: auto;
+				margin-top: -22px;
+				padding: 16px;
+				color: white;
+				font-weight: bold;
+				font-size: 18px;
+				border-radius: 0 3px 3px 0;
+			}
+			.next {
+				right: 0;
+				border-radius: 3px 0 0 3px;
+			}
+			.prev:hover, .next:hover {
+				background-color: rgba(0,0,0,0.8);
+			}
+			.text {
+				color: black;
+				font-size: 20px;
+				padding: 8px 10px;
+				position: absolute;
+				bottom: 8px;
+				width: 100%;
+				text-align: center;
+			}
+			.numbertext {
+				color: black;
+				font-size: 12px;
+				padding: 8px 12px;
+				position: absolute;
+				top: 0;
+			}
+			.dot {
+				cursor:pointer;
+				height: 13px;
+				width: 13px;
+				margin: 0 2px;
+				background-color: #bbb;
+				border-radius: 50%;
+				display: inline-block;
+				transition: background-color 0.6s ease;
+			}
+			.active, .dot:hover {
+			  	background-color: #717171;
+			}
+	</style>
+</head>
+</head>
+<body>
+	<div class="all">
+	<header>
+		<h1>Augemented Reality</h1>
+	</header>
+	<nav>
+		<ul>
+			<li><a href="index.html">Index</a></li>
+  			<li><a href="history.html">History</a></li>
+ 			<li><a href="apps.html">Apps and Products</a></li>
+		</ul>
+	</nav>
+	<article>
+	<h1>Discover the potential of Augemented Reality (AR)!</h1>
+		<div class="slideshow-container">
+			<div class="mySlides fade">
+			<div class="numbertext">1 / 4</div>
+			<img src="http://i.imgur.com/A6dvauI.jpg" style="width:90%">
+			<div class="text">Holo Lens by Microsoft</div>
+		</div>
+
+		<div class="mySlides fade">
+			<div class="numbertext">2 / 4</div>
+			<img src="http://i.imgur.com/Im1orZm.jpg" style="width:100%">
+			<div class="text">Pokemon GO</div>
+		</div>
+
+		<div class="mySlides fade">
+			<div class="numbertext">3 / 4</div>
+			<img src="http://i.imgur.com/ThVk3nd.jpg" style="width:90%">
+			<div class="text">Medical VR</div>
+		</div>
+
+		<div class="mySlides fade">
+			<div class="numbertext">4 / 4</div>
+			<img src="http://i.imgur.com/R9cOdYI.jpg" style="width:88%">
+			<div class="text">Google Cardboard</div>
+		</div>
+
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+		</div>
+		<br>
+		<div style="text-align:center">
+			<span class="dot" onclick="currentSlide(1)"></span> 
+			<span class="dot" onclick="currentSlide(2)"></span> 
+			<span class="dot" onclick="currentSlide(3)"></span> 
+			<span class="dot" onclick="currentSlide(4)"></span> 
+		</div>
+	</div>
+	</article>
+	</div>
+</body>
+<script type="text/javascript">
+	var slideIndex = 1;
+	showSlides(slideIndex);
+
+	function plusSlides(n) {
+		showSlides(slideIndex += n);
+	}
+
+	function currentSlide(n) {
+		showSlides(slideIndex = n);
+	}
+
+	function showSlides(n) {
+		var i;
+		var slides = document.getElementsByClassName("mySlides");
+		var dots = document.getElementsByClassName("dot");
+		if (n > slides.length) {slideIndex = 1} 
+		if (n < 1) {slideIndex = slides.length}
+		for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none"; 
+		}
+		for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+		}
+		slides[slideIndex-1].style.display = "block"; 
+		dots[slideIndex-1].className += " active";
+	}
+</script>
+</html>
+
+
+
+
+
+
+
+
